@@ -4,11 +4,11 @@ from ultralytics import YOLO
 from pathlib import Path
 
 # モデルの読み込み（OBB対応YOLOv11モデル）
-model_path = r"C:\Users\tayav\Documents\resarch\runs\obb\train\weights\best.pt"
+model_path = "obb\train\weights\best.pt"
 yolo = YOLO(model_path)
 
 # 入力動画
-video_path = r"C:\Users\tayav\Documents\resarch\output_videos\mainB_recording_20250803_141847.mp4"
+video_path = ""
 cap = cv2.VideoCapture(video_path)
 
 # 出力先

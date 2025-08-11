@@ -1,9 +1,12 @@
+from pathlib import Path
 import cv2
 from ultralytics import YOLO
 
+
+current_dir = Path(__file__).parent
+model_path = current_dir/'obb'/'train'/'weights'/'best.pt'
 # 学習済みのモデルをロード
-# model = YOLO('yolo11n.pt')
-model = YOLO(r'C:\Users\tayav\Documents\resarch\runs\obb\train\weights\best.pt')
+model = YOLO(model_path)
 
 # 動画ファイルのパスを指定
 file_name = 'fish_test2'
